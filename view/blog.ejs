@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Page</title>
+    
+    <script src="https://kit.fontawesome.com/9766ed6e64.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/blog.css"/>
+
+</head>
+<body background="">
+    <nav>
+        <div class="nav-links">
+            <ul>
+                <li><a href="/" class="button">Home</a></li>
+                <li><a href="/register" class="button">Register</a></li>
+                
+                
+                <li><a href="/login" class="button">Login</a></li>
+            </ul>
+        </div>
+        <div class="accounts">
+            
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-google-plus"></i>
+        </div>
+    </nav>
+
+    <section class="header">
+        <h1>Personal Blog</h1>
+        <h4>W E L C O M E</h4>
+    </section>
+
+
+    <% for(var i = users.length-1; i >=0; i--) { %> 
+
+
+
+
+
+    
+    <section class="content-container"><%= users[i].id %>
+        <div class="left-content"><%= users[i].title %>   
+            <div class="another-article"><%= users[i].date %> 
+                
+
+                
+
+                <img src="/images/<%= users[i].picture %>" width="100px" height="100px"/>
+                <p> <%= users[i].title %> <span id="dots">...</span></p>
+            <a href="/singlePost/<%= users[i].id %>" class="btn read-more">Read More</a>
+            </div>
+            </div>
+    </section>
+
+
+    <% } %>
+
+
+
+    <footer>
+        <p>&copy; All Rights Reserved</p>
+    </footer>
+</body>
+</html>
